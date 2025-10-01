@@ -1,0 +1,12 @@
+new check
+origin	https://github.com/whajjoul/presidio.git (fetch)
+origin	https://github.com/whajjoul/presidio.git (push)
+0
+text: My name is whajjoul
+items: [{'start': 11, 'end': 19, 'entity_type': 'PERSON', 'text': 'whajjoul', 'operator': 'replace'}]
+new check
+origin	https://github.com/whajjoul/presidio.git (fetch)
+origin	https://github.com/whajjoul/presidio.git (push)
+0
+text: My name is whajjoul, whajjoull
+items: [{'start': 21, 'end': 29, 'entity_type': 'PERSON', 'text': 'whajjoul', 'operator': 'replace'}, {'start': 11, 'end': 19, 'entity_type': 'PERSON', 'text': 'whajjoul', 'operator': 'replace'}]
