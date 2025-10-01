@@ -288,3 +288,11 @@ def test_given_negative_start_or_endpoint_then_we_fail(start, end):
 def create_recognizer_result(entity_type: str, score: float, start: int, end: int):
     data = {"entity_type": entity_type, "score": score, "start": start, "end": end}
     return RecognizerResult.from_json(data)
+
+def test_intersects():
+    from presidio_anonymizer.entities import RecognizerResult
+    r1 = RecognizerResult(entity_type="NAME", start=0, end=11, score=0.8)
+    r2 = RecognizerResult(entity_type="NAME", start=5, end=12, score=0.9)
+
+    # overlap from 5 to 11 → 6 chars
+    assert r1.intersects(r2) == 6
